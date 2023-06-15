@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Because the execution time increased significantly with the input size, and in the best case (sorted numbers) it took 0.681s, so it performed faster when compared to the sort3, which took 3.784s
+
+sort2 uses: Merge Sort
+
+How do you know?: Because the execution time for random, reversed and sorted numbers is much lower compared to the other 2 programs. The best case (already sorted numbers) it took 0.794s to sort 50000 numbers, while sort1 took 0.681s and sort 3 took 3.784. For the worst case (random numbers), it took 0.879s, while sort1 took 7.852s and sort3 took 3.378s.
+
+sort3 uses: Selection Sort
+
+How do you know?: Because the execution time increased significantly with the input size, and in the best case (sorted numbers) it took 3.784s, so it was the slowest
