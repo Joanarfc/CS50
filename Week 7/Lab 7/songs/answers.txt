@@ -1,0 +1,1 @@
+Spotify might use this data to generate insights about the user's listening habits, like creating the top artist listened, the top genres listened, the user's preferences. Based on the user's preferences, Spotify can, for instance, recommend musics and new artists that correspond to those preferences.
