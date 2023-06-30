@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Trivia!</title>
+    <script>
+        function checkAnswer(button) {
+            var selectedAnswer = button.textContent.trim();
+            var correctAnswer = "C) JavaScript";
+            var choices = document.querySelectorAll('.choices button');
+
+            choices.forEach(function (choice) {
+                if (choice === button) {
+                    choice.disabled = true;
+                    if (selectedAnswer !== correctAnswer) {
+                        choice.classList.add('incorrect');
+                    }
+                } else {
+                    choice.disabled = false;
+                    choice.classList.remove('correct', 'incorrect');
+                }
+            });
+
+            var feedback = document.querySelector("#multipleChoiceFeedback");
+
+            if (selectedAnswer === correctAnswer) {
+                feedback.textContent = "Correct!";
+                button.classList.add('correct');
+            } else {
+                feedback.textContent = "Incorrect";
+            }
+        }
+
+        function checkFreeResponse() {
+            var userInput = document.querySelector("#userInput");
+            var userAnswer = userInput.value.trim();
+            var correctAnswer = "Hypertext Markup Language";
+
+            if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+                userInput.style.backgroundColor = "green";
+                userInput.style.color = "white";
+                document.querySelector("#freeResponseFeedback").textContent = "Correct!";
+            } else {
+                userInput.style.backgroundColor = "red";
+                userInput.style.color = "white";
+                document.querySelector("#freeResponseFeedback").textContent = "Incorrect";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Part 1: Multiple Choice </h2>
+            <hr>
+            <h3 class="question">Which of the following is a programming language?</h3>
+            <div class="choices">
+                <button onclick="checkAnswer(this)">A) HTML</button>
+                <button onclick="checkAnswer(this)">B) CSS</button>
+                <button onclick="checkAnswer(this)">C) JavaScript</button>
+                <button onclick="checkAnswer(this)">D) Excel</button>
+            </div>
+            <p id="multipleChoiceFeedback" class="multipleChoiceFeedback"></p>
+        </div>
+
+        <div class="section">
+            <h2>Part 2: Free Response</h2>
+            <hr>
+            <h3 class="question">What does HTML stand for?</h3>
+            <input type="text" id="userInput" placeholder="Type your answer...">
+            <button onclick="checkFreeResponse()">Confirm</button>
+            <p id="freeResponseFeedback"></p>
+        </div>
+    </div>
+</body>
+
+</html>
