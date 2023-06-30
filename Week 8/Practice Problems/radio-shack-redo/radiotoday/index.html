@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RadioShack</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAVBAR section -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="width: 15%" href="#"><img src="radioshack-logo.png" class="img-thumbnail"
+          alt="RadioShack logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navLinks">
+          <!-- Navigation links are inserted here dynamically -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel -->
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="summersidewalk-sale.jpeg" class="d-block w-100" alt="Summer side walk sale" height="220">
+            <br><br><br><br><br><br><br><br>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Summer Sidewalk Sale on clearance items, one-of-a-kind and demo models.</h5>
+              <p>Shop early for best selection!</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="new_Sizz.jpeg" class="d-block w-100" alt="Brand Phones and Answerers sale" height="200">
+            <br><br><br><br><br><br><br><br>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>In addition to Sidewalk Sale items, you&rsquo;ll find more savings here!</h5>
+              <p>Plus, all RadioShack-Brand Phones and Answerers are on sale!</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search bar container -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+      </div>
+      <div class="col-md-3">
+        <div class="d-flex justify-content-end">
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product card container -->
+  <div class="container" style=" padding-top: 20px">
+    <div class="row" id="cardRow">
+    </div>
+  </div>
+
+  <!-- Footer section -->
+  <footer id="dynamic-footer" class="py-5">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-6 col-sm-4 col-lg-2 mb-3">
+        <h5>COMPANY INFORMATION</h5>
+        <ul id="company-info" class="nav flex-column"></ul>
+      </div>
+      <div class="col-6 col-sm-4 col-lg-2 mb-3">
+        <h5>CUSTOMER SUPPORT</h5>
+        <ul id="customer-support" class="nav flex-column"></ul>
+      </div>
+      <div class="col-12 col-md-8 col-lg-5 offset-lg-1 mb-3">
+        <form>
+          <h5>SIGN UP FOR EXCLUSIVE DISCOUNTS AND RADIOSHACK NEWS BY EMAIL</h5>
+          <p>Subscribe to our newsletter and get 10% off your first purchase</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <p id="footer-text" class="text-center text-body-secondary"></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>

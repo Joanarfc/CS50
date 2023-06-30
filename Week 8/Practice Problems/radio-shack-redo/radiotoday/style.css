@@ -1,0 +1,25 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-body {
+  flex-grow: 1;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-footer {
+  margin-top: auto;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
